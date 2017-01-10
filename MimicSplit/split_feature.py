@@ -245,7 +245,7 @@ class MimicSplit:
 
     def get_path(self):
         fileName = QFileDialog.getSaveFileName()
-        if fileName[-5:-1] == '.shp':
+        if fileName[-4:] == '.shp':
             pass
         else:
             fileName = fileName + '.shp'
@@ -282,7 +282,6 @@ class MimicSplit:
     		return 0
     	else:
     		return 1
-
 
     def run(self):
         """Run method that performs all the real work"""
