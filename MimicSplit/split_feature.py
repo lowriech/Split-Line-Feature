@@ -227,10 +227,8 @@ class MimicSplit:
         		print("Feature {} of {}".format(str(idx+1), quotient+1))
         		start = 0 if idx == 0 else (idx*cutoff)-1
         		#Case for last linestring
-        		if quotient == idx:
-        			if remainder == 1:
-        				pass
-        			elif remainder > 1:
+        		if quotient == idx+1:
+        			if remainder > 1:
         				to_append = QgsGeometry.fromPolyline(points[(idx*cutoff):point_count])
         				print(to_append)
         				geometries.append((to_append, remainder))
